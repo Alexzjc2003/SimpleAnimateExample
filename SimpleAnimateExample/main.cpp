@@ -1,7 +1,6 @@
 #include <iostream>
 
 #include <camera/PerspecCamera.h>
-#include <Context.h>
 #include <control/FPScontrol.h>
 #include <geometry/BoxGeometry.h>
 #include <material/CommonMaterial.h>
@@ -9,19 +8,21 @@
 #include <Scene.h>
 #include <texture/ImageTexture.h>
 
+#include <Context.h>
 using namespace SA;
 
 int main()
 {
-	std::cout << "Hello, world" << std::endl;
 
 	Context ctx;
 	Renderer renderer;
 	FPSControl control;
-	PerspecCamera camera(45.0, 1920.0 / 1080.0, 0.1, 100.0);
+	PerspecCamera camera(45.0, 1920.0 / 1080.0, 0.01, 100.0);
+	camera.setPosition(glm::vec3(0, 0, -1));
 
-	control.bindObject(&camera);
-	control.bindContext(&ctx);
+
+	//control.bindObject(&camera);
+	//control.bindContext(&ctx);
 
 
 	Scene scene;
@@ -37,15 +38,15 @@ int main()
 
 	scene.add(box);
 
-	ctx.loop([&renderer, &scene, &camera, &control, &ctx]() {
-		
+	ctx.loop([&]() {
+
+		//control.inputLoop(&ctx);
+		camera.setPosition(glm::vec3(0, 0, ctx.getTime() < 10 ? ctx.getTime():10));
 		renderer.render(scene, camera);
-		control.inputLoop(nullptr);
-		//std::cout << "Hello, world" << std::endl;
-		std::cout << ctx.getTime() << std::endl;
-
-
 	});
+
+	//ctx.loop([]() {});
+
 
 	return 0;
 }
