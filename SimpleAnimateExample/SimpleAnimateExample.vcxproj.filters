@@ -18,9 +18,18 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\Project1\images\awesomeface.png">
+    <None Include="SimpleAnimate.dll" />
+    <None Include="glfw3.dll" />
+    <None Include="static\shader\static\common\.frag" />
+    <None Include="static\shader\static\common\.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="static\image\awesomeface.png">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>
