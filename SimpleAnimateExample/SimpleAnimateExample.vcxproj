@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>E:\Users\zzlxx\文档\mycode\opengl\projects\SimpleAnimate\externals\include;E:\Users\zzlxx\文档\mycode\opengl\projects\SimpleAnimate\SimpleAnimate\include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\Users\zzlxx\文档\mycode\opengl\projects\SimpleAnimate\SimpleAnimate\bin\Debug;E:\Users\zzlxx\文档\mycode\opengl\projects\SimpleAnimate\externals\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)SimpleAnimate\externals\include;$(SolutionDir)SimpleAnimate\SimpleAnimate\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)SimpleAnimate\SimpleAnimate\asset;$(SolutionDir)SimpleAnimate\externals\lib;$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,12 +142,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="glfw3.dll" />
-    <None Include="SimpleAnimate.dll" />
     <None Include="static\shader\static\common\.frag" />
     <None Include="static\shader\static\common\.vert" />
   </ItemGroup>

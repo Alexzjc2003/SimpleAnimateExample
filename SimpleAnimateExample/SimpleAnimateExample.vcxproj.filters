@@ -18,12 +18,8 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="glad.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SimpleAnimate.dll" />
     <None Include="glfw3.dll" />
     <None Include="static\shader\static\common\.frag" />
     <None Include="static\shader\static\common\.vert" />

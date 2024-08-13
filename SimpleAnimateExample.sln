@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleAnimateExample", "SimpleAnimateExample\SimpleAnimateExample.vcxproj", "{912B1BEA-73A9-4695-9882-CCB135F68FCB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{99801BC0-EA17-44E1-9CC4-633C62374840} = {99801BC0-EA17-44E1-9CC4-633C62374840}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleAnimate", "..\SimpleAnimate\SimpleAnimate\SimpleAnimate.vcxproj", "{99801BC0-EA17-44E1-9CC4-633C62374840}"
 EndProject

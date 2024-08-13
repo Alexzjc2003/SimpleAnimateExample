@@ -1,0 +1,4 @@
+[submodule "SimpleAnimate"]
+	path = SimpleAnimate
+	url = https://github.com/Alexzjc2003/SimpleAnimate
+	branch = dev
