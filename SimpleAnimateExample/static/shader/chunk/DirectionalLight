@@ -1,0 +1,14 @@
+#ifndef MAX_DIRECTIONAL_LIGHTS
+#define MAX_DIRECTIONAL_LIGHTS 4
+#endif
+
+struct DirectionalLight_t {
+  mat3 ads;
+  vec3 atten;
+
+  vec3 direction;
+};
+
+layout(std140) uniform DirectionalLight {
+  DirectionalLight_t light;
+} directionalLights[MAX_DIRECTIONAL_LIGHTS];

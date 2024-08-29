@@ -6,10 +6,9 @@ in VS_OUT {
   vec2 uv;
 } fs_in;
 
-out vec4 FragColor;
-
 uniform sampler2D uDiffuse;
 
 void main() {
-  FragColor = texture2D(uDiffuse, fs_in.uv);
+  gl_FragColor = texture2D(uDiffuse, fs_in.uv);
+
 }

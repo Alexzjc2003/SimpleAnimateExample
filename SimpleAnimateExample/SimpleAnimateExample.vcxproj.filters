@@ -28,5 +28,11 @@
     <Image Include="static\image\awesomeface.png">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="static\image\container_diffuse.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="static\image\container_specular.png">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>
